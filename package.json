@@ -1,0 +1,28 @@
+{
+  "name"            : "live-list",
+  "version"         : "0.1.0",
+  "description"     : "Fast linked list with live iterator",
+  "keywords"        : [],
+  "author"          : "Maximilian Antoni (http://maxantoni.de)",
+  "homepage"        : "http://maxantoni.de/projects/live-list.js/",
+  "main"            : "./lib/list.js",
+  "engines"         : {
+    "node"          : ">=0.6"
+  },
+  "scripts"         : {
+    "test"          : "autolint --once && mocha test"
+  },
+  "repository"      : {
+    "type"          : "git",
+    "url"           : "https://github.com/mantoni/live-list.js.git"
+  },
+  "devDependencies" : {
+    "uglify-js"     : ">=2.4 <3",
+    "autolint"      : ">=1.1 <2",
+    "mocha"         : ">=1.14 <2",
+    "sinon"         : ">=1.7 <2",
+    "browserify"    : ">=2.35 < 3",
+    "bench"         : "~0.3.5"
+  },
+  "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"]
+}
