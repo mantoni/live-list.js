@@ -9,7 +9,6 @@
 'use strict';
 
 var assert = require('assert');
-var sinon  = require('sinon');
 
 var list   = require('../lib/list');
 

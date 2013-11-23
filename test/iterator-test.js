@@ -9,7 +9,6 @@
 'use strict';
 
 var assert = require('assert');
-var sinon  = require('sinon');
 
 var List   = require('../lib/list').List;
 
@@ -67,8 +66,7 @@ describe('iterator.api', function () {
   });
 
   it('returns object pushed after next', function () {
-    var i   = this.list.iterator();
-    var spy = sinon.spy();
+    var i = this.list.iterator();
     this.list.push(1);
 
     i.next();
