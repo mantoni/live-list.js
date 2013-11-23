@@ -1,4 +1,4 @@
-# live-list.js [![Build Status](https://secure.travis-ci.org/mantoni/live-list.js.png?branch=master)](http://travis-ci.org/mantoni/live-list.js) [![NPM version](https://badge.fury.io/js/live-list.png)](http://badge.fury.io/js/live-list)
+# live-list.js [![Build Status](https://secure.travis-ci.org/mantoni/live-list.js.png?branch=master)](http://travis-ci.org/mantoni/live-list.js)
 
 Fast linked list with live iterator. The list can be modified while iterating
 over the items.
@@ -14,8 +14,6 @@ npm install live-list
 ```
 
 ## Download for browsers
-
-Standalone browser package are here: <...>
 
 You can also use npm and bundle it with your application using
 [Browserify](http://browserify.org).
