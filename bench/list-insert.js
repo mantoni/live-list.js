@@ -14,13 +14,15 @@ var times = 50;
 
 exports.compare = {
 
-  'list.insert': function () {
+  'iterator.insert': function () {
     var a = [];
     var l = new list.List();
     l.push(0);
+    var it = l.iterator();
+    it.next();
     var i;
     for (i = 0; i < times; i++) {
-      l.insert(i, i);
+      it.insert(i);
     }
   },
 
