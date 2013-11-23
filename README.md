@@ -7,16 +7,16 @@ Repository: <https://github.com/mantoni/live-list.js>
 
 ---
 
-## Install with NPM
+## Install with npm
 
 ```
 npm install live-list
 ```
 
-## Download for browsers
+## Browser compatibility
 
-You can also use npm and bundle it with your application using
-[Browserify](http://browserify.org).
+To use this module in a browser, download the npm package and then use
+[Browserify](http://browserify.org) to create a standalone version:
 
 ## Usage
 
@@ -56,4 +56,4 @@ while (i.hasNext()) {
 
 ## License
 
-Released
+MIT
