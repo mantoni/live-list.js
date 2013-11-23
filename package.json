@@ -10,19 +10,18 @@
     "node"          : ">=0.6"
   },
   "scripts"         : {
-    "test"          : "autolint --once && mocha test"
+    "test"          : "make test"
   },
   "repository"      : {
     "type"          : "git",
     "url"           : "https://github.com/mantoni/live-list.js.git"
   },
   "devDependencies" : {
-    "uglify-js"     : ">=2.4 <3",
     "autolint"      : ">=1.1 <2",
     "mocha"         : ">=1.14 <2",
-    "sinon"         : ">=1.7 <2",
-    "browserify"    : ">=2.35 < 3",
-    "bench"         : "~0.3.5"
+    "bench"         : "~0.3.5",
+    "consolify"     : "~0.6.0",
+    "phantomic"     : "~0.2.1"
   },
   "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"]
 }
