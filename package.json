@@ -23,5 +23,6 @@
     "consolify"     : "~0.6.0",
     "phantomic"     : "~0.2.1"
   },
-  "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"]
+  "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
+  "license"         : "MIT"
 }
