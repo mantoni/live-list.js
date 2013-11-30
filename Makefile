@@ -7,7 +7,6 @@ tests   = ./test/*-test.js
 html    = test/all.html
 version = $(shell node -p "require('./package.json').version")
 
-
 .PHONY: test
 test:
 	@autolint --once
