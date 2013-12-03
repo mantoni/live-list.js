@@ -1,5 +1,6 @@
 .*
 !/.gitignore
 !/.travis.yml
+!/.vimrc
 /node_modules
 /test/all.html
