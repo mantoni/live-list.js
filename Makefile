@@ -9,7 +9,7 @@ version = $(shell node -p "require('./package.json').version")
 
 .PHONY: test
 test:
-	@autolint --once
+	@jslint --color lib/*.js ${tests}
 	@mocha test
 
 phantom:

@@ -17,8 +17,8 @@
     "url"           : "https://github.com/mantoni/live-list.js.git"
   },
   "devDependencies" : {
-    "autolint"      : ">=1.1 <2",
     "mocha"         : ">=1.14 <2",
+    "jslint"        : "~0.2.5",
     "bench"         : "~0.3.5",
     "consolify"     : "~0.6.0",
     "phantomic"     : "~0.2.1"
