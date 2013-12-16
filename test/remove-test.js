@@ -28,10 +28,8 @@ describe('list.remove', function () {
     i.next();
     this.list.remove(2);
 
-    assert(i.hasNext());
-
     assert.equal(i.next(), 3);
-    assert.strictEqual(i.hasNext(), false);
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('replaces _tail with _head if last item is removed', function () {

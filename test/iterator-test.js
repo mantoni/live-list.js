@@ -13,7 +13,7 @@ var assert = require('assert');
 var List   = require('../lib/list').List;
 
 
-describe('iterator.api', function () {
+describe('iterator', function () {
 
   beforeEach(function () {
     this.list = new List();
@@ -22,7 +22,7 @@ describe('iterator.api', function () {
   it('has no next item initially', function () {
     var i = this.list.iterator();
 
-    assert(!i.hasNext());
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('has next item after push', function () {
@@ -30,39 +30,20 @@ describe('iterator.api', function () {
 
     var i = this.list.iterator();
 
-    assert(i.hasNext());
+    assert.equal(i.next(), 1);
   });
 
-  it('returns pushed value and set hasNext to false', function () {
+  it('returns pushed values and then undefined', function () {
+    this.list.push(3);
+    this.list.push(7);
     this.list.push(42);
     var i = this.list.iterator();
 
-    var v = i.next();
-
-    assert.equal(v, 42);
-    assert.strictEqual(i.hasNext(), false);
-  });
-
-  it('does not set hasNext to false', function () {
-    this.list.push(1);
-    this.list.push(2);
-    var i = this.list.iterator();
-
-    i.next();
-
-    assert(i.hasNext());
-  });
-
-  it('returnes each pushed value in push order', function () {
-    this.list.push(1);
-    this.list.push(2);
-    this.list.push(3);
-    var i = this.list.iterator();
-
-    assert.equal(i.next(), 1);
-    assert.equal(i.next(), 2);
     assert.equal(i.next(), 3);
-    assert.strictEqual(i.hasNext(), false);
+    assert.equal(i.next(), 7);
+    assert.equal(i.next(), 42);
+    assert.strictEqual(i.next(), undefined);
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('returns object pushed after next', function () {
@@ -72,19 +53,8 @@ describe('iterator.api', function () {
     i.next();
     this.list.push(2);
 
-    assert(i.hasNext());
-
     assert.equal(i.next(), 2);
-    assert.strictEqual(i.hasNext(), false);
-  });
-
-  it('throws if next was never called', function () {
-    this.list.push(1);
-    var i = this.list.iterator();
-
-    assert.throws(function () {
-      i.insert(0);
-    });
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('inserts before first item', function () {
@@ -95,7 +65,7 @@ describe('iterator.api', function () {
     i.insert(0);
 
     assert.deepEqual(this.list.toArray(), [0, 1]);
-    assert.strictEqual(i.hasNext(), false);
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('insert does not confuse push', function () {
@@ -128,7 +98,7 @@ describe('iterator.api', function () {
 
     assert.deepEqual(this.list.toArray(), []);
     assert.strictEqual(this.list.length, 0);
-    assert.strictEqual(i.hasNext(), false);
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('remove does not break push', function () {
@@ -155,7 +125,7 @@ describe('iterator.api', function () {
 
     assert.deepEqual(this.list.toArray(), [1, 2]);
     assert.strictEqual(this.list.length, 2);
-    assert.strictEqual(i.hasNext(), false);
+    assert.strictEqual(i.next(), undefined);
   });
 
   it('remove can be performed twice', function () {
@@ -166,12 +136,12 @@ describe('iterator.api', function () {
     i.next();
     i.remove();
 
-    assert(i.hasNext());
+    assert(i.next());
 
     i.next();
     i.remove();
 
-    assert.strictEqual(i.hasNext(), false);
+    assert.strictEqual(i.next(), undefined);
     assert.deepEqual(this.list.toArray(), []);
     assert.strictEqual(this.list.length, 0);
   });
@@ -184,7 +154,7 @@ describe('iterator.api', function () {
     i.next();
     i.remove();
 
-    assert(i.hasNext());
+    assert(i.next());
     assert.deepEqual(this.list.toArray(), [2]);
     assert.strictEqual(this.list.length, 1);
   });
@@ -199,7 +169,7 @@ describe('iterator.api', function () {
     i.next();
     i.remove();
 
-    assert(i.hasNext());
+    assert(i.next());
     assert.deepEqual(this.list.toArray(), [1, 3]);
     assert.strictEqual(this.list.length, 2);
   });

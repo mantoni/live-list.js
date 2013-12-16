@@ -27,21 +27,21 @@ describe('list.removeAll', function () {
     assert.strictEqual(this.list.length, 0);
   });
 
-  it('resets hasNext to false for new iterator', function () {
+  it('resets new iterator', function () {
     this.list.push(42);
 
     this.list.removeAll();
 
-    assert.strictEqual(this.list.iterator().hasNext(), false);
+    assert.strictEqual(this.list.iterator().next(), undefined);
   });
 
-  it('resets hasNext to false for existing iterator', function () {
+  it('resets existing iterator', function () {
     this.list.push(42);
     var iterator = this.list.iterator();
 
     this.list.removeAll();
 
-    assert.strictEqual(iterator.hasNext(), false);
+    assert.strictEqual(iterator.next(), undefined);
   });
 
   it('does not break push', function () {

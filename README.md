@@ -28,10 +28,11 @@ l.push(3);
 l.unshift(1);
 l.insert(2, 3);
 
-var i = l.iterator();
-while (i.hasNext()) {
-  console.log(i.next());
+var v, i = l.iterator();
+while ((v = i.next()) !== undefined) {
+  console.log(v);
 }
+```
 ```
 
 ## List API
@@ -47,8 +48,8 @@ while (i.hasNext()) {
 
 ## Iterator API
 
-- `hasNext()`: Returns `true` if there are more items in the list to iterate
-- `next()`: Returns the next item in the list
+- `next()`: Returns the next item in the list. If there are no more items,
+  `undefined` is returned.
 - `insert(value)`: Inserts a value into the list before the value
   returned by the last call to `next()`
 - `remove()`: Removes the value from the list that was returned
