@@ -21,6 +21,7 @@ exports.compare = {
     for (i = 0; i < times; i++) {
       l.push(i);
     }
+    return a;
   },
 
   'array.push': function () {
@@ -30,6 +31,7 @@ exports.compare = {
     for (i = 0; i < times; i++) {
       a.push(i);
     }
+    return l;
   }
 
 };

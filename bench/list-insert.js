@@ -24,6 +24,7 @@ exports.compare = {
     for (i = 0; i < times; i++) {
       it.insert(i);
     }
+    return a;
   },
 
   'array.splice': function () {
@@ -34,6 +35,7 @@ exports.compare = {
     for (i = 0; i < times; i++) {
       a.splice(0, 0, i);
     }
+    return l;
   }
 
 };

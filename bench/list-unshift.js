@@ -21,6 +21,7 @@ exports.compare = {
     for (i = 0; i < times; i++) {
       l.unshift(i);
     }
+    return a;
   },
 
   'array.unshift': function () {
@@ -30,6 +31,7 @@ exports.compare = {
     for (i = 0; i < times; i++) {
       a.unshift(i);
     }
+    return l;
   }
 
 };
