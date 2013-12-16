@@ -7,7 +7,7 @@
   "homepage"        : "http://maxantoni.de/projects/live-list.js/",
   "main"            : "./lib/list.js",
   "engines"         : {
-    "node"          : ">=0.6"
+    "node"          : ">=0.8"
   },
   "scripts"         : {
     "test"          : "make test"
