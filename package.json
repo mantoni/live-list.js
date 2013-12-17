@@ -1,6 +1,6 @@
 {
   "name"            : "live-list",
-  "version"         : "0.2.0",
+  "version"         : "0.3.0",
   "description"     : "Fast linked list with live iterator",
   "keywords"        : [],
   "author"          : "Maximilian Antoni (http://maxantoni.de)",
@@ -15,6 +15,10 @@
   "repository"      : {
     "type"          : "git",
     "url"           : "https://github.com/mantoni/live-list.js.git"
+  },
+  "dependencies"    : {
+    "inherits"      : "~2.0.1",
+    "min-iterator"  : "~0.1.0"
   },
   "devDependencies" : {
     "mocha"         : ">=1.14 <2",

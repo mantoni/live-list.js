@@ -10,13 +10,20 @@
 
 var assert = require('assert');
 
-var List   = require('../lib/list').List;
+var MinIterator = require('min-iterator');
+var List        = require('../lib/list').List;
 
 
 describe('iterator', function () {
 
   beforeEach(function () {
     this.list = new List();
+  });
+
+  it('is an instance of MinIteartor', function () {
+    var i = this.list.iterator();
+
+    assert(i instanceof MinIterator);
   });
 
   it('has no next item initially', function () {

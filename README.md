@@ -16,7 +16,7 @@ npm install live-list
 ## Browser compatibility
 
 To use this module in a browser, download the npm package and then use
-[Browserify](http://browserify.org) to create a standalone version:
+[Browserify](http://browserify.org) to create a standalone version.
 
 ## Usage
 
@@ -33,7 +33,6 @@ while ((v = i.next()) !== undefined) {
   console.log(v);
 }
 ```
-```
 
 ## List API
 
@@ -48,12 +47,15 @@ while ((v = i.next()) !== undefined) {
 
 ## Iterator API
 
-- `next()`: Returns the next item in the list. If there are no more items,
-  `undefined` is returned.
+The iterator is derived from [min-iterator][] and extends the API with these
+functions:
+
 - `insert(value)`: Inserts a value into the list before the value
   returned by the last call to `next()`
 - `remove()`: Removes the value from the list that was returned
   by the last call to `next()`
+
+[min-iterator]: https://github.com/mantoni/min-iterator.js
 
 ## License
 
