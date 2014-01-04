@@ -1,15 +1,16 @@
 {
   "name"            : "live-list",
-  "version"         : "0.3.0",
+  "version"         : "0.3.1",
   "description"     : "Fast linked list with live iterator",
   "keywords"        : ["list", "iterator"],
   "author"          : "Maximilian Antoni (http://maxantoni.de)",
-  "homepage"        : "http://maxantoni.de/projects/live-list.js/",
+  "homepage"        : "https://github.com/mantoni/live-list.js",
   "main"            : "./lib/list.js",
   "engines"         : {
     "node"          : ">=0.8"
   },
   "scripts"         : {
+    "start"         : "mocha --watch",
     "test"          : "make test"
   },
   "repository"      : {
