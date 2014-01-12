@@ -22,10 +22,13 @@
     "min-iterator"  : "~0.1.0"
   },
   "devDependencies" : {
-    "mocha"         : ">=1.14 <2",
-    "jslint"        : "~0.2.5",
+    "mocha"         : ">=1.17 <2",
+    "jslint"        : "~0.2.6",
     "bench"         : "~0.3.5",
-    "consolify"     : "~0.6.0",
+    "browserify"    : ">=3.19 <4",
+    "coverify"      : "~1.0.2",
+    "mocaccino"     : "~0.1.1",
+    "consolify"     : "~0.7.0",
     "phantomic"     : "~0.2.1"
   },
   "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
