@@ -26,7 +26,7 @@
     "jslint"        : "~0.2.6",
     "bench"         : "~0.3.5",
     "browserify"    : ">=3.19 <4",
-    "coverify"      : "~1.0.2",
+    "coverify"      : "~1.0.4",
     "mocaccino"     : "~0.1.1",
     "consolify"     : "~0.7.0",
     "phantomic"     : "~0.2.1"
