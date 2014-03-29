@@ -10,8 +10,9 @@
     "node"          : ">=0.10"
   },
   "scripts"         : {
-    "start"         : "mocha --watch",
+    "start"         : "mochify --watch --node --cover",
     "lint"          : "jslint --color './**/*.js'",
+    "test-wd"       : "mochify --wd",
     "test"          : "npm run lint && mocha -R spec && mochify --cover"
   },
   "repository"      : {
