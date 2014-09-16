@@ -1,11 +1,11 @@
-# live-list.js [![Build Status](https://secure.travis-ci.org/mantoni/live-list.js.png?branch=master)](http://travis-ci.org/mantoni/live-list.js)
+# live-list.js
+
+[![Build Status]](https://travis-ci.org/mantoni/live-list.js)
+[![SemVer]](http://semver.org)
+[![License]](https://github.com/mantoni/live-list.js/blob/master/LICENSE)
 
 Fast linked list with live iterator. The list can be modified while iterating
 over the items.
-
-Repository: <https://github.com/mantoni/live-list.js>
-
----
 
 ## Install with npm
 
@@ -60,3 +60,7 @@ functions:
 ## License
 
 MIT
+
+[Build Status]: http://img.shields.io/travis/mantoni/live-list.js.svg
+[SemVer]: http://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: http://img.shields.io/npm/l/live-list.svg
