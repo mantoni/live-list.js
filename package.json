@@ -1,6 +1,6 @@
 {
   "name"            : "live-list",
-  "version"         : "0.3.1",
+  "version"         : "1.0.0",
   "description"     : "Fast linked list with live iterator",
   "keywords"        : ["list", "iterator"],
   "author"          : "Maximilian Antoni (http://maxantoni.de)",
